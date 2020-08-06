@@ -220,14 +220,12 @@ export default {
         method: this.isEdit ? "put" : "post",
         url: "/item/goods",
         data: goodsParams
-      })
-        .then(() => {
+      }).then(() => {
           // 成功，关闭窗口
           this.$emit("close");
           // 提示成功
           this.$message.success("保存成功了");
-        })
-        .catch(() => {
+        }).catch(() => {
           this.$message.error("保存失败！");
         });
     }
